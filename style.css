@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(90deg, #e0e0e0, #b0b0b0, #505050);
   background-size: 300% 300%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 5s ease infinite;
   color: white;
   overflow: hidden;
 }
@@ -127,30 +127,30 @@ body {
 }
 
 /* Discord */
-.btn:nth-child(3) {
+.btn:nth-child(2) {
   background: #5865F2;
 }
-.btn:nth-child(3):hover {
+.btn:nth-child(2):hover {
   background: #4752c4;
   transform: translateY(-4px);
   box-shadow: 0 0 20px #5865F2;
 }
 
 /* TikTok */
-.btn:nth-child(4) {
+.btn:nth-child(3) {
   background: #000000;
 }
-.btn:nth-child(4):hover {
+.btn:nth-child(3):hover {
   background: #111111;
   transform: translateY(-4px);
   box-shadow: 0 0 20px #00f2ea;
 }
 
 /* WhatsApp */
-.btn:nth-child(5) {
+.btn:nth-child(4) {
   background: #25D366;
 }
-.btn:nth-child(5):hover {
+.btn:nth-child(4):hover {
   background: #1ebd5a;
   transform: translateY(-4px);
   box-shadow: 0 0 20px #25D366;
@@ -166,10 +166,6 @@ body {
 .delay2 { animation-delay: 0.4s; }
 .delay3 { animation-delay: 0.6s; }
 .delay4 { animation-delay: 0.8s; }
-.delay5 { animation-delay: 1s; }
-.delay6 { animation-delay: 1.2s; }
-.delay7 { animation-delay: 1.4s; }
-.delay8 { animation-delay: 1.6s; }
 
 @keyframes slideUp {
   to {

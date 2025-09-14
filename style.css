@@ -52,7 +52,7 @@ body {
   background: linear-gradient(90deg, #d946ef, #9333ea, #6d28d9);
   background-size: 200% 200%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
   text-shadow: 0 0 10px rgba(180, 90, 255, 0.6);
   animation: gradientMove 6s ease infinite;
 }

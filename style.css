@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(90deg, #e0e0e0, #b0b0b0, #505050);
   background-size: 300% 300%;
-  animation: gradientBG 5s ease infinite;
+  animation: gradientBG 15s ease infinite;
   color: white;
   overflow: hidden;
 }
@@ -124,16 +124,6 @@ body {
   filter: brightness(1.2);
   transform: translateY(-4px);
   box-shadow: 0 0 20px #d62976;
-}
-
-/* Email (hapus jika ingin) */
-.btn:nth-child(2) {
-  background: #ea4335;
-}
-.btn:nth-child(2):hover {
-  background: #c5221f;
-  transform: translateY(-4px);
-  box-shadow: 0 0 20px #ea4335;
 }
 
 /* Discord */

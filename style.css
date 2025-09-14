@@ -30,28 +30,28 @@ body {
 /* Judul neon gradasi */
 h1 {
   font-size: 2.2em;
-  background: linear-gradient(90deg, #00ffff, #00ff99, #00ccff);
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #00ff99);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ff99, 0 0 30px #00ccff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff, 0 0 30px #00ff99;
   margin: 10px 0 25px;
 }
 
 /* Ikon Sosial Media */
-.social-icons {
+.social-links {
   display: flex;
   gap: 25px;
   margin-bottom: 20px;
 }
 
-.social-icons a {
+.social-links a {
   font-size: 2em;
   color: #00eaff;
   transition: transform 0.2s ease, text-shadow 0.2s ease;
-  text-shadow: 0 0 10px #00eaff, 0 0 20px #00ffff;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00ff99;
 }
 
-.social-icons a:hover {
+.social-links a:hover {
   transform: scale(1.2);
   text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffff;
 }
@@ -61,22 +61,4 @@ footer {
   margin-bottom: 10px;
   font-size: 0.9em;
   color: #aaa;
-}
-
-/* Ikon plate pojok kiri atas */
-.plate-icon {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 28px;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ff99;
-  cursor: pointer;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-  z-index: 999;
-}
-
-.plate-icon:hover {
-  transform: scale(1.2);
-  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffff;
 }

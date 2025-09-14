@@ -6,9 +6,9 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(270deg, #6a11cb, #9333ea, #8e2de2, #d946ef);
-  background-size: 600% 600%;
-  animation: gradientBG 15s ease infinite;
+  background: linear-gradient(90deg, #e0e0e0, #b0b0b0, #505050 );
+  background-size: 300% 300%;
+  animation: gradientBG 5s ease infinite;
   color: white;
   overflow: hidden;
 }
@@ -52,7 +52,7 @@ body {
   background: linear-gradient(90deg, #d946ef, #9333ea, #6d28d9);
   background-size: 200% 200%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: transparant;
   text-shadow: 0 0 10px rgba(180, 90, 255, 0.6);
   animation: gradientMove 6s ease infinite;
 }

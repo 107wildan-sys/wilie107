@@ -13,15 +13,15 @@
   <button id="theme-toggle">🌙</button>
 
   <!-- Foto Profil -->
-  <div class="profile-pic fade-in">
+  <div class="profile-pic">
     <img src="profil.jpg" alt="Foto Profil" />
   </div>
 
   <!-- Nama -->
-  <h2 class="neon-text fade-in">Wilie? bisa jadi</h2>
+  <h2 class="neon-text">Wilie? bisa jadi</h2>
 
   <!-- Menu -->
-  <h4><em class="neon-text fade-in">Menu:</em></h4>
+  <h4><em class="neon-text">Menu:</em></h4>
   <div class="link-buttons">
     <a class="whatsapp" href="https://wa.me/6281411086900?text=Halo%20kak%2C%20saya%20mau%20buy%20am%20prem" target="_blank">
       <i class="fab fa-whatsapp"></i> Buy Am Prem Here!
@@ -50,10 +50,15 @@
   <script>
     const toggleBtn = document.getElementById("theme-toggle");
     toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light-theme");
-      toggleBtn.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
+      // Efek fade
+      document.body.classList.add("fading");
+      setTimeout(() => {
+        document.body.classList.toggle("light-theme");
+        toggleBtn.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
+        document.body.classList.remove("fading");
+      }, 300);
 
-      // Tambahkan animasi klik
+      // Animasi klik toggle
       toggleBtn.classList.add("clicked");
       setTimeout(() => toggleBtn.classList.remove("clicked"), 800);
     });

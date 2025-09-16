@@ -11,7 +11,7 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   padding: 0 15px;
-  transition: background 0.5s ease, color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 /* Animasi background gelap */
@@ -34,24 +34,40 @@ body.light-theme {
   100% { background-position: 0% 50%; }
 }
 
+/* Fade transisi saat toggle */
+body.fading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 html { scroll-behavior: smooth; }
 
-/* Neon text */
+/* Neon text + animasi nama */
 .neon-text {
+  display: inline-block;
   background: linear-gradient(270deg, #00f0ff, #ff00ff, #00ff9d);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   text-align: center;
+  animation: nameSlide 1s ease forwards, glowPulse 3s infinite alternate;
 }
 body.light-theme .neon-text {
   background: linear-gradient(270deg, #0077ff, #ff0080, #00cc66);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@keyframes nameSlide {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px rgba(0,255,255,0.5), 0 0 10px rgba(255,0,255,0.3); }
+  100% { text-shadow: 0 0 20px rgba(0,255,255,0.9), 0 0 30px rgba(255,0,255,0.7); }
+}
 
-/* Foto profil dengan aura */
+/* Foto profil dengan animasi */
 .profile-pic {
   position: relative;
   width: 160px;
@@ -76,16 +92,15 @@ body.light-theme .neon-text {
   50% { transform: scale(1.1); opacity: 1; }
   100% { transform: scale(0.95); opacity: 0.7; }
 }
-.profile-pic img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Fade-in umum */
-.fade-in {
-  opacity: 0;
-  transform: scale(0.9);
-  animation: fadeZoom 1s ease forwards;
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: profileZoom 1s ease forwards;
 }
-@keyframes fadeZoom {
-  to { opacity: 1; transform: scale(1); }
+@keyframes profileZoom {
+  0% { transform: scale(0.6) rotate(-15deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
 }
 
 /* Toggle pojok kiri atas */

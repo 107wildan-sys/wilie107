@@ -14,7 +14,7 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Animasi background dark */
+/* Animasi background gelap */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

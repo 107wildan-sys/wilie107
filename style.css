@@ -14,17 +14,24 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Animasi background gradasi */
+/* Animasi background dark */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Mode Terang */
+/* Mode terang dengan gradasi lembut */
 body.light-theme {
-  background: #f9f9f9;
+  background: linear-gradient(-45deg, #ffffff, #f0f0f0, #e6f7ff, #fff0f6);
+  background-size: 400% 400%;
+  animation: gradientLight 15s ease infinite;
   color: #111;
+}
+@keyframes gradientLight {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 html { scroll-behavior: smooth; }
@@ -42,10 +49,9 @@ body.light-theme .neon-text {
   background: linear-gradient(270deg, #0077ff, #ff0080, #00cc66);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: none;
 }
 
-/* Foto Profil + pulse glow */
+/* Foto profil dengan aura */
 .profile-pic {
   position: relative;
   width: 160px;
@@ -72,7 +78,7 @@ body.light-theme .neon-text {
 }
 .profile-pic img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Animasi fade-in umum */
+/* Fade-in umum */
 .fade-in {
   opacity: 0;
   transform: scale(0.9);
@@ -82,7 +88,7 @@ body.light-theme .neon-text {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Toggle di pojok kiri atas */
+/* Toggle pojok kiri atas */
 #theme-toggle {
   position: fixed;
   top: 15px; left: 15px;
@@ -127,7 +133,7 @@ body.light-theme #theme-toggle { background: #ddd; color: #111; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Tombol dengan gradasi brand */
+/* Tombol brand gradasi */
 a.whatsapp {
   background: linear-gradient(90deg, #25D366, #128C7E);
 }
@@ -144,7 +150,7 @@ a.tiktok {
   background: linear-gradient(45deg, #FE2C55, #25F4EE, #000000);
 }
 
-/* Hover Glow sesuai brand */
+/* Hover glow */
 a.whatsapp:hover { box-shadow: 0 0 20px #25D366; }
 a.alightmotion:hover { box-shadow: 0 0 20px #00C2CB; }
 a.discord:hover { box-shadow: 0 0 20px #5865F2; }
@@ -154,7 +160,7 @@ a.tiktok:hover { box-shadow: 0 0 20px #FE2C55, 0 0 30px #25F4EE; }
 /* Icon Alight Motion */
 .icon-am { width: 28px; height: 28px; object-fit: contain; }
 
-/* Footer + animasi */
+/* Footer */
 footer {
   text-align: center;
   margin: 40px 0 20px;

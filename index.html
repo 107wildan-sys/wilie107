@@ -52,6 +52,10 @@
     toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("light-theme");
       toggleBtn.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
+
+      // Tambahkan animasi klik
+      toggleBtn.classList.add("clicked");
+      setTimeout(() => toggleBtn.classList.remove("clicked"), 800);
     });
   </script>
 

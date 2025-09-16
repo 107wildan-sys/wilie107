@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,8 @@
 </head>
 <body>
 
-  <!-- Toggle Dark/Light Mode -->
-  <button id="theme-toggle">🌙</button>
+  <!-- Toggle Dark/Light Mode (pojok kiri atas) -->
+  <button id="theme-toggle"><i class="fas fa-moon"></i></button>
 
   <!-- Foto Profil -->
   <div class="profile-pic">
@@ -43,24 +44,25 @@
     </a>
   </div>
 
-  <!-- Footer -->
-  <footer class="fade-footer">© 2025 Wilie. All rights reserved.</footer>
+  <!-- Lisensi -->
+  <footer>© 2025 Wilie. All rights reserved.</footer>
 
   <!-- Script -->
   <script>
     const toggleBtn = document.getElementById("theme-toggle");
-    toggleBtn.addEventListener("click", () => {
-      // Efek fade
-      document.body.classList.add("fading");
-      setTimeout(() => {
-        document.body.classList.toggle("light-theme");
-        toggleBtn.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
-        document.body.classList.remove("fading");
-      }, 300);
 
-      // Animasi klik toggle
-      toggleBtn.classList.add("clicked");
-      setTimeout(() => toggleBtn.classList.remove("clicked"), 800);
+    toggleBtn.addEventListener("click", () => {
+      // Animasi putar ikon
+      toggleBtn.classList.add("rotate");
+      setTimeout(() => toggleBtn.classList.remove("rotate"), 500);
+
+      // Toggle tema
+      document.body.classList.toggle("light-theme");
+
+      // Ganti ikon
+      toggleBtn.innerHTML = document.body.classList.contains("light-theme") 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
     });
   </script>
 
